@@ -196,6 +196,23 @@ details p{color:var(--muted);margin-top:10px;font-size:15px}
 #rvForm .full{grid-column:1/-1}
 #rvForm input[type=text],#rvForm select,#rvForm textarea{font:inherit;font-size:15px;font-weight:400;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px;outline:none}
 @media(max-width:900px){.reviews{grid-template-columns:1fr}}@media(max-width:560px){#rvForm{grid-template-columns:1fr}}
+.rv-top{color:#F7C948 !important;font-weight:600}
+.burger{display:grid !important;place-items:center;border:1px solid var(--line) !important;border-radius:10px}
+.drawer{position:fixed;top:0;left:0;bottom:0;width:340px;max-width:88vw;background:#fff;z-index:80;transform:translateX(-105%);transition:.3s;overflow-y:auto;padding:18px 20px 30px;box-shadow:20px 0 50px -20px rgba(0,0,0,.3)}
+.drawer.on{transform:none}
+.drawer-bg{position:fixed;inset:0;background:rgba(13,19,34,.45);z-index:79;opacity:0;visibility:hidden;transition:.3s}.drawer-bg.on{opacity:1;visibility:visible}
+.dh{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.dh b{font-size:17px;color:var(--ink)}.dh button{background:none;border:0;font-size:20px;cursor:pointer;color:var(--ink)}
+.dgrp{padding:14px 0;border-bottom:1px solid var(--line)}
+.dgrp small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:6px}
+.dgrp a{display:block;padding:9px 10px;border-radius:8px;font-size:15px;color:var(--text)}.dgrp a:hover{background:var(--soft);color:var(--ink)}
+.rv-sum{display:flex;gap:26px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:14px}
+.rv-sum .big{text-align:center;min-width:120px}.rv-sum .big b{display:block;font-size:44px;font-weight:800;color:var(--ink);line-height:1}
+.st5{font-size:22px;letter-spacing:2px;margin:6px 0}.rv-sum small{font-size:12.5px;color:var(--muted)}
+.bars{flex:1;display:grid;gap:6px}.bar{display:grid;grid-template-columns:36px 1fr 20px;gap:10px;align-items:center;font-size:13px;color:var(--muted)}
+.bar i{display:block;height:8px;background:var(--soft-2);border-radius:99px;overflow:hidden}.bar em{display:block;height:100%;background:#F2B01E}
+@media(max-width:560px){.rv-sum{flex-direction:column;align-items:stretch}}
+.nav{gap:18px}.menu>li>a{padding:10px 8px}
 /* contact */
 .contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
 .cinfo{background:var(--ink);color:#C9CFDA;border-radius:20px;padding:40px}
@@ -247,7 +264,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
   .topbar .tl span.hide{display:none}
   .menu{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 20px 18px;border-bottom:1px solid var(--line);margin:0}
   .menu.open{display:flex}.drop{display:none}
-  .burger{display:grid;place-items:center}.nav-r .btn{display:none}
+  .burger{display:grid;place-items:center}.nav-r .btn{display:none}.menu.open{display:none}
   .hero-g,.why,.contact,.free{grid-template-columns:1fr}
   .float.f1{left:8px}.float.f2{right:8px}
   .steps,.pgrid{grid-template-columns:1fr 1fr}
@@ -268,7 +285,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
 <body>
 <div class="topbar"><div class="wrap">
   <div class="tl"><a href="mailto:zaidipakiza6@gmail.com">zaidipakiza6@gmail.com</a><a class="hide" href="https://wa.me/923444720578" target="_blank" rel="noopener">WhatsApp +92 344 4720578</a><span class="hide">Working remotely with clients worldwide</span></div>
-  <div class="tl"><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener">Pinterest</a><a class="hide" href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener">Fiverr</a><a class="hide" href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener">Upwork</a></div>
+  <div class="tl"><a href="#reviews" class="rv-top">★★★★★ Reviews</a><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener">Pinterest</a><a class="hide" href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener">Fiverr</a><a class="hide" href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener">Upwork</a></div>
 </div></div>
 
 <header id="top">
@@ -295,11 +312,31 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="nav-r">
       <select id="cur" class="cur" aria-label="Currency"></select>
       <a href="#contact" class="btn btn-primary btn-sm">Get a free quote</a>
-      <button class="burger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <button class="burger" aria-label="Open menu" onclick="toggleDrawer(true)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
 </header>
 
+<div class="drawer-bg" id="dbg" onclick="toggleDrawer(false)"></div>
+<aside class="drawer" id="drawer" aria-label="Categories">
+  <div class="dh"><b>Browse categories</b><button onclick="toggleDrawer(false)" aria-label="Close">✕</button></div>
+  <div class="dgrp"><small>Services</small>
+    <a href="shopify-store-setup.html">🛒 Shopify store setup</a>
+    <a href="#services" data-svc="WordPress / WooCommerce website">🌐 WordPress &amp; WooCommerce</a>
+    <a href="fiverr-gig-setup.html">💼 Fiverr profile &amp; gigs</a>
+    <a href="instagram-post-design.html">🎨 Social media design</a>
+    <a href="brand-kit-design.html">✨ Brand kit &amp; logo</a>
+    <a href="pinterest-marketing.html">📌 Pinterest marketing</a>
+    <a href="virtual-assistant-services.html">💻 Virtual assistant &amp; data entry</a></div>
+  <div class="dgrp"><small>Invitation cards</small>
+    <a href="#contact" data-svc="Invitation card">💍 Wedding · Nikah · Walima</a>
+    <a href="#contact" data-svc="Invitation card">🌼 Mehndi · Mayun · Dholki</a>
+    <a href="#contact" data-svc="Invitation card">🎂 Birthday &amp; Aqiqa</a></div>
+  <div class="dgrp"><small>Digital shop</small>
+    <a href="#shop" data-f="branding">Branding</a><a href="#shop" data-f="content">Social media</a><a href="#shop" data-f="ecommerce">E-commerce</a><a href="#shop" data-f="freelance">Freelancing</a><a href="#free">🎁 Free download</a></div>
+  <div class="dgrp"><small>More</small>
+    <a href="#reviews">⭐ Reviews</a><a href="#guides">📖 Guides &amp; tips</a><a href="#work">🖼 Portfolio</a><a href="#faq">❓ FAQ</a><a href="#contact">✉️ Contact &amp; quote</a></div>
+</aside>
 <main>
 <section class="hero">
   <div class="wrap hero-g">
@@ -322,6 +359,37 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
 </section>
 
 <div class="plat"><div class="wrap"><p>Platforms I work with</p><span>Shopify</span><span>WordPress</span><span>WooCommerce</span><span>Canva</span><span>Fiverr</span><span>Etsy</span><span>Amazon</span><span>eBay</span></div></div>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="head center reveal"><span class="kicker">Reviews</span><h2>What clients say</h2><p class="lead">Worked with me or bought a product? I'd love to hear from you — every review is read personally.</p></div>
+    <div class="reviews">
+      <div class="reveal">
+        <div class="rv-sum">
+          <div class="big"><b id="rvAvg">5.0</b><div class="st5" id="rvStars">★★★★★</div><small id="rvCount">No reviews yet — be the first!</small></div>
+          <div class="bars" id="rvBars"></div>
+        </div>
+        <div class="rv-list" id="rvList"></div>
+        <div class="rv-empty" id="rvEmpty"><b>Be the first to leave a review ✨</b>Reviews from real clients will appear here after they are checked.</div>
+      </div>
+      <div class="form reveal">
+        <h3>Leave a review</h3>
+        <p>Share your experience — it helps other small businesses decide.</p>
+        <form id="rvForm">
+          <label class="f">Your name<input type="text" name="name" required placeholder="e.g. Sara K."></label>
+          <label class="f">Country<input type="text" name="country" placeholder="e.g. UK"></label>
+          <label class="f full">Service or product
+            <select name="what"><option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option><option>Social media design</option><option>Brand kit</option><option>Invitation card</option><option>Digital product</option><option>Virtual assistant</option><option>Other</option></select></label>
+          <div class="full"><span style="font-size:13.5px;font-weight:600;color:var(--ink)">Rating</span>
+            <div class="stars"><input type="radio" name="r" id="r5" value="5" checked><label for="r5">★</label><input type="radio" name="r" id="r4" value="4"><label for="r4">★</label><input type="radio" name="r" id="r3" value="3"><label for="r3">★</label><input type="radio" name="r" id="r2" value="2"><label for="r2">★</label><input type="radio" name="r" id="r1" value="1"><label for="r1">★</label></div></div>
+          <label class="f full">Your review<textarea name="text" rows="4" required placeholder="How was your experience?"></textarea></label>
+          <button class="btn btn-primary full" type="submit">Send review on WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="mailalt full">Prefer email? <a id="rvMail" href="mailto:zaidipakiza6@gmail.com?subject=Review%20for%20Studio%20Pakiza">Send it by email</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="services">
   <div class="wrap">
@@ -470,33 +538,6 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
   </div>
 </section>
 
-<section id="reviews">
-  <div class="wrap">
-    <div class="head center reveal"><span class="kicker">Reviews</span><h2>What clients say</h2><p class="lead">Worked with me or bought a product? I'd love to hear from you — every review is read personally.</p></div>
-    <div class="reviews">
-      <div class="reveal">
-        <div class="rv-list" id="rvList"></div>
-        <div class="rv-empty" id="rvEmpty"><b>Be the first to leave a review ✨</b>Reviews from real clients will appear here after they are checked.</div>
-      </div>
-      <div class="form reveal">
-        <h3>Leave a review</h3>
-        <p>Share your experience — it helps other small businesses decide.</p>
-        <form id="rvForm">
-          <label class="f">Your name<input type="text" name="name" required placeholder="e.g. Sara K."></label>
-          <label class="f">Country<input type="text" name="country" placeholder="e.g. UK"></label>
-          <label class="f full">Service or product
-            <select name="what"><option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option><option>Social media design</option><option>Brand kit</option><option>Invitation card</option><option>Digital product</option><option>Virtual assistant</option><option>Other</option></select></label>
-          <div class="full"><span style="font-size:13.5px;font-weight:600;color:var(--ink)">Rating</span>
-            <div class="stars"><input type="radio" name="r" id="r5" value="5" checked><label for="r5">★</label><input type="radio" name="r" id="r4" value="4"><label for="r4">★</label><input type="radio" name="r" id="r3" value="3"><label for="r3">★</label><input type="radio" name="r" id="r2" value="2"><label for="r2">★</label><input type="radio" name="r" id="r1" value="1"><label for="r1">★</label></div></div>
-          <label class="f full">Your review<textarea name="text" rows="4" required placeholder="How was your experience?"></textarea></label>
-          <button class="btn btn-primary full" type="submit">Send review on WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <p class="mailalt full">Prefer email? <a id="rvMail" href="mailto:zaidipakiza6@gmail.com?subject=Review%20for%20Studio%20Pakiza">Send it by email</a></p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="faq" class="bg-soft">
   <div class="wrap">
     <div class="head center reveal"><span class="kicker">FAQ</span><h2>Frequently asked questions</h2></div>
@@ -538,7 +579,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
         <label>Service
           <select name="service" id="svc">
             <option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option>
-            <option>Social media design</option><option>Brand kit</option><option>Pinterest pins</option><option>Virtual assistant / data entry</option><option>Digital product order</option><option>Something else</option>
+            <option>Social media design</option><option>Brand kit</option><option>Pinterest pins</option><option>Virtual assistant / data entry</option><option>Invitation card</option><option>Digital product order</option><option>Something else</option>
           </select></label>
         <label>Budget<select name="budget" id="budgetSel"><option>Under $50</option><option>$50 – $100</option><option>$100 – $250</option><option>$250+</option><option>Not sure yet</option></select></label>
         <label class="full">When do you need it?<select name="when"><option>This week</option><option>Within 2 weeks</option><option>This month</option><option>Flexible</option></select></label>
@@ -572,6 +613,8 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
 <div class="lb" id="lb" onclick="this.classList.remove('on')"><img alt=""></div>
 
 <script>
+function toggleDrawer(o){document.getElementById('drawer').classList.toggle('on',o);document.getElementById('dbg').classList.toggle('on',o)}
+document.querySelectorAll('#drawer a').forEach(a=>a.addEventListener('click',()=>{toggleDrawer(false);if(a.dataset.svc){const s=document.getElementById('svc');if(s){[...s.options].forEach(o=>{if(o.text.startsWith(a.dataset.svc.split(' ')[0]))s.value=o.value})}}if(a.dataset.f){const c=document.querySelector('.chip[data-f="'+a.dataset.f+'"]');c&&c.click()}}));
 document.getElementById('yr').textContent=new Date().getFullYear();
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 // ---------- local currency ----------
@@ -639,6 +682,12 @@ document.getElementById('q').addEventListener('input',refresh);document.getEleme
 curSel.addEventListener('change',refresh);refresh();
 // reviews (approved reviews are added to this list)
 const REVIEWS=[];
+(function(){const n=REVIEWS.length,cnt=[0,0,0,0,0];REVIEWS.forEach(r=>cnt[r.stars-1]++);
+const avg=n?REVIEWS.reduce((a,r)=>a+r.stars,0)/n:0;
+document.getElementById('rvAvg').textContent=n?avg.toFixed(1):'—';
+document.getElementById('rvStars').innerHTML=[1,2,3,4,5].map(i=>`<span style="color:${n&&i<=Math.round(avg)?'#F2B01E':'#D3D8E0'}">★</span>`).join('');
+if(n)document.getElementById('rvCount').textContent='Based on '+n+' review'+(n>1?'s':'');
+document.getElementById('rvBars').innerHTML=[5,4,3,2,1].map(s=>`<div class="bar"><span>${s} ★</span><i><em style="width:${n?cnt[s-1]/n*100:0}%"></em></i><span>${cnt[s-1]}</span></div>`).join('');})();
 (function(){const L=document.getElementById('rvList');if(REVIEWS.length){document.getElementById('rvEmpty').style.display='none';L.innerHTML=REVIEWS.map(r=>`<div class="rv"><div class="st">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div><p>“${r.text}”</p><small>${r.name}${r.country?' · '+r.country:''} — ${r.what}</small></div>`).join('')}})();
 const rf=document.getElementById('rvForm');
 function rvText(){const f=new FormData(rf);return 'Review for Studio Pakiza\n\nName: '+f.get('name')+'\nCountry: '+(f.get('country')||'-')+'\nService: '+f.get('what')+'\nRating: '+f.get('r')+'/5\nReview: '+f.get('text');}
