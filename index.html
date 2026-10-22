@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://pakizabatool.github.io/">
 <meta name="p:domain_verify" content="1f90ef25a38df8351658410169f19e54"/>
 <link rel="icon" href="favicon.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Studio Pakiza","url":"https://pakizabatool.github.io/","image":"https://pakizabatool.github.io/og.jpg","founder":{"@type":"Person","name":"Pakiza Batool"},"description":"Shopify store setup, WordPress and WooCommerce websites, Fiverr gig setup, social media design, brand kits and digital products for small businesses.","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"email":"zaidipakiza6@gmail.com","areaServed":["PK","SA","AE","GB","US","CA","AU"],"sameAs":["https://www.pinterest.com/zaidipakiza6/","https://www.linkedin.com/in/pakiza-batool-1647ab365/","https://www.fiverr.com/pakizazaidi4","https://www.upwork.com/freelancers/~0191d5c1745207b191"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Studio Pakiza","url":"https://pakizabatool.github.io/","image":"https://pakizabatool.github.io/og.jpg","founder":{"@type":"Person","name":"Pakiza Batool"},"description":"Shopify store setup, WordPress and WooCommerce websites, Fiverr gig setup, social media design, brand kits and digital products for small businesses.","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"email":"zaidipakiza6@gmail.com","areaServed":["PK","SA","AE","GB","US","CA","AU"],"sameAs":["https://www.behance.net/pakizazaidi","https://zaidipakiza.gumroad.com","https://github.com/PakizaBatool","https://www.pinterest.com/zaidipakiza6/","https://www.linkedin.com/in/pakiza-batool-1647ab365/","https://www.fiverr.com/pakizazaidi4","https://www.upwork.com/freelancers/~0191d5c1745207b191"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -165,6 +165,13 @@ summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:
 summary::after{content:"+";font-size:22px;line-height:1;color:var(--brand)}
 details[open] summary::after{content:"–"}
 details p{color:var(--muted);margin-top:10px;font-size:15px}
+.profs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.prof{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:.2s}
+.prof:hover{border-color:var(--ink);transform:translateY(-2px)}
+.prof .pi{width:42px;height:42px;border-radius:10px;color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
+.prof b{display:block;color:var(--ink);font-size:15.5px}.prof small{color:var(--muted);font-size:13px}
+.prof svg{margin-left:auto;color:var(--muted)}
+@media(max-width:900px){.profs{grid-template-columns:1fr 1fr}}@media(max-width:560px){.profs{grid-template-columns:1fr}}
 /* contact */
 .contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
 .cinfo{background:var(--ink);color:#C9CFDA;border-radius:20px;padding:40px}
@@ -236,7 +243,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
 <body>
 <div class="topbar"><div class="wrap">
   <div class="tl"><a href="mailto:zaidipakiza6@gmail.com">zaidipakiza6@gmail.com</a><a class="hide" href="https://wa.me/923444720578" target="_blank" rel="noopener">WhatsApp +92 344 4720578</a><span class="hide">Working remotely with clients worldwide</span></div>
-  <div class="tl"><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener">Pinterest</a><a class="hide" href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener">Fiverr</a></div>
+  <div class="tl"><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener">Pinterest</a><a class="hide" href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener">Fiverr</a><a class="hide" href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener">Upwork</a></div>
 </div></div>
 
 <header id="top">
@@ -256,6 +263,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
       <li><a href="#work">Portfolio</a></li>
       <li><a href="#why">About</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#profiles">Profiles</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-r">
@@ -448,6 +456,13 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
   </div>
 </section>
 
+<section id="profiles" style="padding-top:0">
+  <div class="wrap">
+    <div class="head center reveal"><span class="kicker">Find me online</span><h2>Work with me on your favourite platform</h2><p class="lead">Prefer to hire through a marketplace? You'll find me on all of these.</p></div>
+    <div class="profs"><a class="prof reveal" href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener"><span class="pi" style="background:#0A66C2">in</span><span><b>LinkedIn</b><small>Professional profile</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="prof reveal" href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener"><span class="pi" style="background:#1DBF73">fi</span><span><b>Fiverr</b><small>Order a gig</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="prof reveal" href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener"><span class="pi" style="background:#14A800">Up</span><span><b>Upwork</b><small>Hire me hourly</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="prof reveal" href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener"><span class="pi" style="background:#E60023">P</span><span><b>Pinterest</b><small>Design ideas & pins</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="prof reveal" href="https://www.behance.net/pakizazaidi" target="_blank" rel="noopener"><span class="pi" style="background:#1769FF">Bē</span><span><b>Behance</b><small>Design portfolio</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="prof reveal" href="https://zaidipakiza.gumroad.com" target="_blank" rel="noopener"><span class="pi" style="background:#FF90E8;color:#121A2C">G</span><span><b>Gumroad</b><small>Digital product store</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="prof reveal" href="https://github.com/PakizaBatool" target="_blank" rel="noopener"><span class="pi" style="background:#24292F">GH</span><span><b>GitHub</b><small>Website source</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap contact">
     <div class="cinfo reveal">
@@ -490,7 +505,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
   <div class="wrap fgrid">
     <div><a href="#top" class="logo"><span class="mk">P</span><span>Studio Pakiza</span></a>
       <p class="footer-about">Shopify &amp; WordPress setup, Fiverr gigs, design and digital products for small businesses — by Pakiza Batool.</p>
-      <div class="soc"><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener" aria-label="Pinterest">P</a><a href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener" aria-label="Fiverr">fi</a><a href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener" aria-label="Upwork">up</a></div></div>
+      <div class="soc"><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener" aria-label="Pinterest">P</a><a href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener" aria-label="Fiverr">fi</a><a href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener" aria-label="Upwork">up</a><a href="https://www.behance.net/pakizazaidi" target="_blank" rel="noopener" aria-label="Behance">Bē</a><a href="https://github.com/PakizaBatool" target="_blank" rel="noopener" aria-label="GitHub">GH</a></div></div>
     <div><h4>Services</h4><ul><li><a href="#services">Shopify store setup</a></li><li><a href="#services">WordPress &amp; WooCommerce</a></li><li><a href="#services">Fiverr profile &amp; gigs</a></li><li><a href="#services">Social media design</a></li><li><a href="#services">Virtual assistant</a></li></ul></div>
     <div><h4>Digital shop</h4><ul><li><a href="#shop">All products</a></li><li><a href="#shop">Starter bundle</a></li><li><a href="#free">Free palette pack</a></li><li><a href="https://zaidipakiza.gumroad.com" target="_blank" rel="noopener">Gumroad store</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="https://wa.me/923444720578" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:zaidipakiza6@gmail.com">zaidipakiza6@gmail.com</a></li><li>Lahore, Pakistan</li><li>Remote worldwide</li></ul></div>
