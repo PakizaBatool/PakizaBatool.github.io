@@ -169,6 +169,8 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
 .mailalt{text-align:center;font-size:14px;color:var(--muted);text-decoration:underline}
 @media(max-width:980px){.setup{grid-template-columns:1fr}.booking{grid-template-columns:1fr;padding:34px 22px}}
 @media(max-width:560px){#bookForm{grid-template-columns:1fr}}
+.cur{font:inherit;font-size:13.5px;color:var(--brown);background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 12px;margin-left:auto;margin-right:14px;cursor:pointer}
+@media(max-width:980px){.cur{margin-right:6px}}
 /* lightbox */
 .lb{position:fixed;inset:0;background:rgba(30,22,16,.86);display:none;place-items:center;z-index:50;padding:24px}
 .lb.on{display:grid}.lb img{max-height:90vh;border-radius:12px}
@@ -205,6 +207,7 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
       <li><a href="#about">About</a></li>
             <li><a href="#faq">FAQ</a></li>
     </ul>
+    <select id="cur" class="cur" aria-label="Currency"></select>
     <a href="#book" class="btn btn-dark">Book a service</a>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
   </div>
@@ -244,10 +247,10 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
       <p>Simple, honest packages for busy owners who'd rather spend their time running the business than fighting with design tools.</p>
     </div>
     <div class="services">
-      <div class="card reveal"><span class="num">01</span><h3>Social media design</h3><p>Scroll-stopping posts, stories and carousels in your brand colours.</p><ul><li>Instagram &amp; Facebook posts</li><li>Story &amp; highlight covers</li><li>Sale and launch graphics</li></ul><div class="from"><span>5 posts from</span><b>$15</b></div></div>
-      <div class="card reveal"><span class="num">02</span><h3>Brand kits</h3><p>A cohesive look you can use everywhere — from your logo to your packaging.</p><ul><li>Simple logo &amp; variations</li><li>Colour palette &amp; fonts</li><li>One-page brand board</li></ul><div class="from"><span>Starting at</span><b>$35</b></div></div>
-      <div class="card reveal"><span class="num">03</span><h3>Pinterest pins</h3><p>Keyword-friendly pins that send steady traffic to your shop or blog.</p><ul><li>Pin templates in Canva</li><li>Titles &amp; descriptions</li><li>Scheduling support</li></ul><div class="from"><span>5 pins from</span><b>$12</b></div></div>
-      <div class="card reveal"><span class="num">04</span><h3>Virtual assistant</h3><p>Reliable hourly help with the tasks that eat your week.</p><ul><li>Data entry &amp; Excel / Sheets</li><li>Shopify, eBay &amp; Amazon listings</li><li>Inbox &amp; admin support</li></ul><div class="from"><span>Hourly from</span><b>$5</b></div></div>
+      <div class="card reveal"><span class="num">01</span><h3>Social media design</h3><p>Scroll-stopping posts, stories and carousels in your brand colours.</p><ul><li>Instagram &amp; Facebook posts</li><li>Story &amp; highlight covers</li><li>Sale and launch graphics</li></ul><div class="from"><span>5 posts from</span><b data-k="s_social">$15</b></div></div>
+      <div class="card reveal"><span class="num">02</span><h3>Brand kits</h3><p>A cohesive look you can use everywhere — from your logo to your packaging.</p><ul><li>Simple logo &amp; variations</li><li>Colour palette &amp; fonts</li><li>One-page brand board</li></ul><div class="from"><span>Starting at</span><b data-k="s_brand">$35</b></div></div>
+      <div class="card reveal"><span class="num">03</span><h3>Pinterest pins</h3><p>Keyword-friendly pins that send steady traffic to your shop or blog.</p><ul><li>Pin templates in Canva</li><li>Titles &amp; descriptions</li><li>Scheduling support</li></ul><div class="from"><span>5 pins from</span><b data-k="s_pin">$12</b></div></div>
+      <div class="card reveal"><span class="num">04</span><h3>Virtual assistant</h3><p>Reliable hourly help with the tasks that eat your week.</p><ul><li>Data entry &amp; Excel / Sheets</li><li>Shopify, eBay &amp; Amazon listings</li><li>Inbox &amp; admin support</li></ul><div class="from"><span>Hourly from</span><b data-k="s_va">$5</b></div></div>
     </div>
   </div>
 </section>
@@ -263,47 +266,47 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
         <img src="product1.webp" alt="The Brand Colour Palette Guide PDF preview">
         <div class="body"><span class="tag">Branding · 9 pages</span><h3>The Brand Colour Palette Guide</h3>
           <p>24 curated palettes with HEX codes and the business type each suits best — plus a quick guide to using colour well.</p>
-          <div class="row"><span class="price">£4</span><a class="btn btn-dark order" data-product="The Brand Colour Palette Guide (£4)" href="#">Order now</a></div></div>
+          <div class="row"><span class="price" data-k="p1">£4</span><a class="btn btn-dark order" data-k="p1" data-product="The Brand Colour Palette Guide" href="#">Order now</a></div></div>
       </article>
       <article class="product reveal">
         <img src="product2.webp" alt="30-Day Social Media Content Planner PDF preview">
         <div class="body"><span class="tag">Planner · 10 pages</span><h3>30-Day Content Planner</h3>
           <p>30 post ideas, a monthly calendar, weekly planners, a caption &amp; hashtag bank and a growth tracker.</p>
-          <div class="row"><span class="price">£6</span><a class="btn btn-dark order" data-product="30-Day Content Planner (£6)" href="#">Order now</a></div></div>
+          <div class="row"><span class="price" data-k="p2">£6</span><a class="btn btn-dark order" data-k="p2" data-product="30-Day Content Planner" href="#">Order now</a></div></div>
       </article>
       <article class="product reveal">
         <img src="product3.webp" alt="100 Instagram Captions for Small Business PDF preview">
         <div class="body"><span class="tag">Copywriting · 13 pages</span><h3>100 Instagram Captions</h3>
           <p>Copy-and-paste captions across 10 categories: launches, sales, reviews, tips, holidays and more.</p>
-          <div class="row"><span class="price">£4</span><a class="btn btn-dark order" data-product="100 Instagram Captions (£4)" href="#">Order now</a></div></div>
+          <div class="row"><span class="price" data-k="p3">£4</span><a class="btn btn-dark order" data-k="p3" data-product="100 Instagram Captions" href="#">Order now</a></div></div>
       </article>
 
       <article class="product reveal">
         <img src="product4.webp" alt="Shopify Store Launch Checklist PDF preview">
         <div class="body"><span class="tag">E-commerce · 6 pages</span><h3>Shopify Store Launch Checklist</h3>
           <p>45+ step-by-step tasks covering settings, theme, products, policies, shipping and your launch plan.</p>
-          <div class="row"><span class="price">£5</span><a class="btn btn-dark order" data-product="Shopify Store Launch Checklist (£5)" href="#">Order now</a></div></div>
+          <div class="row"><span class="price" data-k="p4">£5</span><a class="btn btn-dark order" data-k="p4" data-product="Shopify Store Launch Checklist" href="#">Order now</a></div></div>
       </article>
       <article class="product reveal">
         <img src="product5.webp" alt="Fiverr Gig Starter Kit PDF preview">
         <div class="body"><span class="tag">Freelancing · 5 pages</span><h3>Fiverr Gig Starter Kit</h3>
           <p>Gig title formulas, a description template, 3-package pricing guide, tags, FAQ and an image checklist.</p>
-          <div class="row"><span class="price">£5</span><a class="btn btn-dark order" data-product="Fiverr Gig Starter Kit (£5)" href="#">Order now</a></div></div>
+          <div class="row"><span class="price" data-k="p5">£5</span><a class="btn btn-dark order" data-k="p5" data-product="Fiverr Gig Starter Kit" href="#">Order now</a></div></div>
       </article>
       <article class="product reveal">
         <img src="product6.webp" alt="Product Listing Templates PDF preview">
         <div class="body"><span class="tag">Sellers · 4 pages</span><h3>Product Listing Templates</h3>
           <p>Title formula, 5-bullet structure and description template for Shopify, Amazon, eBay and Etsy.</p>
-          <div class="row"><span class="price">£4</span><a class="btn btn-dark order" data-product="Product Listing Templates (£4)" href="#">Order now</a></div></div>
+          <div class="row"><span class="price" data-k="p6">£4</span><a class="btn btn-dark order" data-k="p6" data-product="Product Listing Templates" href="#">Order now</a></div></div>
       </article>
       <article class="product reveal bundle">
         <div class="body"><span class="tag">Best value</span><h3>The Complete Starter Bundle</h3>
           <p style="margin:0">All six downloads together — branding, content, captions, Shopify, Fiverr and listing templates.</p>
-          <p class="save">Worth £28 — save £10</p>
-          <div class="row"><span class="price">£18</span><a class="btn btn-dark order" data-product="Complete Starter Bundle - all 6 products (£18)" href="#">Order bundle</a></div></div>
+          <p class="save">Worth <span data-k="worth">£28</span> — save <span data-k="save">£10</span></p>
+          <div class="row"><span class="price" data-k="bundle">£18</span><a class="btn btn-dark order" data-k="bundle" data-product="Complete Starter Bundle (all 6 products)" href="#">Order bundle</a></div></div>
       </article>
     </div>
-    <p class="shop-note">Order on WhatsApp or email and I'll send your PDF as soon as payment is confirmed. Custom versions in your brand colours are available too.</p>
+    <p class="shop-note"><span id="curNote"></span>Order on WhatsApp or email and I'll send your PDF as soon as payment is confirmed. Custom versions in your brand colours are available too.</p>
   </div>
 </section>
 
@@ -316,13 +319,13 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
     <div class="setup">
       <div class="scard reveal"><div class="ic">F</div><h3>Fiverr profile &amp; gigs</h3><p>A complete seller profile and up to 3 gigs that look professional and get found.</p>
         <ul><li>Profile bio, skills &amp; photo tips</li><li>Keyword-rich gig titles &amp; tags</li><li>Descriptions, packages &amp; FAQ</li><li>Gig thumbnail designs</li></ul>
-        <div class="from"><span>Starting at</span><b>$25</b></div><a href="#book" class="btn btn-line pick" data-svc="Fiverr profile & gigs">Book this</a></div>
+        <div class="from"><span>Starting at</span><b data-k="s_fiverr">$25</b></div><a href="#book" class="btn btn-line pick" data-svc="Fiverr profile & gigs">Book this</a></div>
       <div class="scard feat reveal"><span class="pop">Most popular</span><div class="ic">S</div><h3>Shopify store setup</h3><p>A ready-to-sell Shopify store designed around your brand.</p>
         <ul><li>Theme setup &amp; brand styling</li><li>Up to 20 products uploaded</li><li>Pages, policies &amp; menus</li><li>Payments, shipping &amp; test order</li></ul>
-        <div class="from"><span>Starting at</span><b>$79</b></div><a href="#book" class="btn btn-dark pick" data-svc="Shopify store setup">Book this</a></div>
+        <div class="from"><span>Starting at</span><b data-k="s_shopify">$79</b></div><a href="#book" class="btn btn-dark pick" data-svc="Shopify store setup">Book this</a></div>
       <div class="scard reveal"><div class="ic">W</div><h3>WordPress &amp; WooCommerce</h3><p>A simple business website or online shop on WordPress.</p>
         <ul><li>Theme install &amp; customisation</li><li>Home, About, Services &amp; Contact</li><li>WooCommerce shop &amp; products</li><li>Mobile-friendly &amp; SEO basics</li></ul>
-        <div class="from"><span>Starting at</span><b>$99</b></div><a href="#book" class="btn btn-line pick" data-svc="WordPress / WooCommerce website">Book this</a></div>
+        <div class="from"><span>Starting at</span><b data-k="s_wp">$99</b></div><a href="#book" class="btn btn-line pick" data-svc="WordPress / WooCommerce website">Book this</a></div>
     </div>
   </div>
 </section>
@@ -342,8 +345,8 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
             <option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option>
             <option>Social media design</option><option>Brand kit</option><option>Pinterest pins</option><option>Virtual assistant / data entry</option><option>Something else</option>
           </select></label>
-        <label>Budget (USD)
-          <select name="budget"><option>Under $50</option><option>$50 – $100</option><option>$100 – $250</option><option>$250+</option><option>Not sure yet</option></select></label>
+        <label>Budget
+          <select name="budget" id="budgetSel"><option>Under $50</option><option>$50 – $100</option><option>$100 – $250</option><option>$250+</option><option>Not sure yet</option></select></label>
         <label>When do you need it?
           <select name="when"><option>This week</option><option>Within 2 weeks</option><option>This month</option><option>Flexible</option></select></label>
         <label class="full">Project details<textarea name="details" rows="4" placeholder="Your business, what you need, any links or examples you like"></textarea></label>
@@ -470,10 +473,56 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
 document.getElementById('yr').textContent=new Date().getFullYear();
 addEventListener('scroll',()=>document.querySelector('header').classList.toggle('scrolled',scrollY>10));
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
-document.querySelectorAll('.order').forEach(b=>{
-  const msg=encodeURIComponent('Hi Pakiza! I would like to order: '+b.dataset.product);
-  b.href='https://wa.me/923444720578?text='+msg; b.target='_blank'; b.rel='noopener';
-});
+
+// ---------- local currency ----------
+const PR={
+ GBP:{s:'£',p1:4,p2:6,p3:4,p4:5,p5:5,p6:4,bundle:18,worth:28,s_social:12,s_brand:27,s_pin:9,s_va:4,s_fiverr:19,s_shopify:59,s_wp:75,b:[40,80,200]},
+ USD:{s:'$',p1:5,p2:8,p3:5,p4:7,p5:7,p6:5,bundle:24,worth:37,s_social:15,s_brand:35,s_pin:12,s_va:5,s_fiverr:25,s_shopify:79,s_wp:99,b:[50,100,250]},
+ EUR:{s:'€',p1:5,p2:7,p3:5,p4:6,p5:6,p6:5,bundle:21,worth:34,s_social:14,s_brand:32,s_pin:11,s_va:5,s_fiverr:23,s_shopify:72,s_wp:89,b:[45,90,225]},
+ CAD:{s:'C$',p1:7,p2:11,p3:7,p4:9,p5:9,p6:7,bundle:32,worth:50,s_social:20,s_brand:48,s_pin:16,s_va:7,s_fiverr:35,s_shopify:109,s_wp:135,b:[70,140,350]},
+ AUD:{s:'A$',p1:8,p2:12,p3:8,p4:10,p5:10,p6:8,bundle:36,worth:56,s_social:23,s_brand:53,s_pin:18,s_va:8,s_fiverr:38,s_shopify:119,s_wp:149,b:[75,150,375]},
+ SAR:{s:'SAR ',p1:19,p2:29,p3:19,p4:25,p5:25,p6:19,bundle:89,worth:136,s_social:55,s_brand:129,s_pin:45,s_va:19,s_fiverr:95,s_shopify:295,s_wp:369,b:[190,375,940]},
+ AED:{s:'AED ',p1:19,p2:29,p3:19,p4:25,p5:25,p6:19,bundle:89,worth:136,s_social:55,s_brand:129,s_pin:45,s_va:19,s_fiverr:95,s_shopify:289,s_wp:365,b:[185,370,920]},
+ PKR:{s:'Rs ',p1:499,p2:799,p3:499,p4:599,p5:599,p6:499,bundle:2499,worth:3494,s_social:2500,s_brand:6000,s_pin:2000,s_va:800,s_fiverr:3500,s_shopify:15000,s_wp:20000,b:[5000,15000,40000]},
+ INR:{s:'₹',p1:399,p2:599,p3:399,p4:499,p5:499,p6:399,bundle:1799,worth:2694,s_social:1200,s_brand:2900,s_pin:999,s_va:399,s_fiverr:1999,s_shopify:6500,s_wp:7999,b:[4000,8000,20000]}
+};
+const LABEL={GBP:'£ GBP',USD:'$ USD',EUR:'€ EUR',CAD:'C$ CAD',AUD:'A$ AUD',SAR:'SAR',AED:'AED',PKR:'Rs PKR',INR:'₹ INR'};
+function detect(){
+  try{const sv=localStorage.getItem('cur');if(sv&&PR[sv])return sv}catch(e){}
+  const tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');
+  const lang=(navigator.language||'en-US').toUpperCase();
+  if(tz==='Asia/Karachi')return'PKR';
+  if(tz==='Asia/Riyadh')return'SAR';
+  if(tz==='Asia/Dubai'||tz==='Asia/Muscat')return'AED';
+  if(tz==='Asia/Kolkata'||tz==='Asia/Calcutta')return'INR';
+  if(tz==='Europe/London'||tz==='Europe/Dublin'&&lang.endsWith('GB'))return'GBP';
+  if(tz.startsWith('Australia/'))return'AUD';
+  if(/^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|Regina|St_Johns|Montreal)/.test(tz)||lang.endsWith('-CA'))return'CAD';
+  if(tz.startsWith('Europe/'))return'EUR';
+  if(tz.startsWith('America/'))return'USD';
+  return'USD';
+}
+const fmt=(c,v)=>PR[c].s+Number(v).toLocaleString('en-US');
+const curSel=document.getElementById('cur');
+Object.keys(PR).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=LABEL[c];curSel.appendChild(o)});
+function applyCur(c){
+  const t=PR[c];curSel.value=c;
+  document.querySelectorAll('[data-k]').forEach(el=>{
+    const k=el.dataset.k;
+    if(el.classList.contains('order')){
+      const msg='Hi Pakiza! I would like to order: '+el.dataset.product+' ('+fmt(c,t[k])+')';
+      el.href='https://wa.me/923444720578?text='+encodeURIComponent(msg);el.target='_blank';el.rel='noopener';
+    } else if(k==='save'){el.textContent=fmt(c,t.worth-t.bundle)}
+    else if(t[k]!==undefined){el.textContent=fmt(c,t[k])}
+  });
+  const b=t.b,bs=document.getElementById('budgetSel');
+  bs.options[0].text='Under '+fmt(c,b[0]);bs.options[1].text=fmt(c,b[0])+' – '+fmt(c,b[1]);
+  bs.options[2].text=fmt(c,b[1])+' – '+fmt(c,b[2]);bs.options[3].text=fmt(c,b[2])+'+';
+  document.getElementById('curNote').textContent='Prices shown in '+LABEL[c]+'. ';
+}
+curSel.addEventListener('change',()=>{try{localStorage.setItem('cur',curSel.value)}catch(e){}applyCur(curSel.value)});
+applyCur(detect());
+
 const bf=document.getElementById('bookForm');
 document.querySelectorAll('.pick').forEach(b=>b.addEventListener('click',()=>{document.getElementById('svc').value=b.dataset.svc}));
 function bookText(){const f=new FormData(bf);return 'Hi Pakiza! I would like to book a service.\n\nName: '+f.get('name')+'\nService: '+f.get('service')+'\nBudget: '+f.get('budget')+'\nTimeline: '+f.get('when')+'\nDetails: '+(f.get('details')||'-');}
