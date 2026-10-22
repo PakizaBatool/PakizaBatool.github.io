@@ -142,6 +142,33 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
 .wa{position:fixed;right:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.35);transition:.25s}
 .wa:hover{transform:scale(1.07)}
 @media(max-width:980px){.freebie{grid-template-columns:1fr;padding:36px 24px}}
+.products .bundle{background:var(--brown);color:var(--sand);border:0;grid-column:1/-1}
+.products .bundle .body{display:grid;grid-template-columns:1.3fr 1fr auto;gap:10px 40px;align-items:center;padding:34px 40px}
+.products .bundle .body .tag{grid-column:1/-1}
+@media(max-width:980px){.products .bundle .body{grid-template-columns:1fr;padding:28px}}
+.products .bundle h3{color:var(--cream);font-size:32px}.products .bundle p{color:#CDBBA8}.products .bundle .tag{color:#D9B08C}
+.products .bundle .save{flex:0;margin-top:14px;color:#D9B08C;font-weight:500}
+.products .bundle .btn{background:var(--cream);color:var(--brown);border-color:var(--cream)}
+.setup{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.scard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px 30px;display:flex;flex-direction:column;position:relative}
+.scard.feat{background:var(--sand);border-color:var(--sand-2)}
+.scard .ic{width:52px;height:52px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-family:var(--script);font-size:30px;color:var(--rose)}
+.scard h3{margin:18px 0 8px}.scard p{color:var(--muted);font-size:15.5px}
+.scard ul{list-style:none;margin:16px 0;font-size:14.5px;flex:1}.scard li{padding:8px 0;border-top:1px dashed var(--line)}
+.scard li:before{content:"✓ ";color:var(--clay)}
+.scard .btn{justify-content:center;margin-top:18px}
+.pop{position:absolute;top:22px;right:22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--brown);color:var(--cream);padding:6px 12px;border-radius:999px}
+.booking{background:#fff;border:1px solid var(--line);border-radius:32px;padding:56px;display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}
+.booking .sub{color:var(--muted);margin-top:16px}
+#bookForm{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#bookForm label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--muted)}
+#bookForm .full{grid-column:1/-1}
+#bookForm input,#bookForm select,#bookForm textarea{font:inherit;font-size:15px;color:var(--brown);background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:12px 14px;outline:none}
+#bookForm input:focus,#bookForm select:focus,#bookForm textarea:focus{border-color:var(--clay)}
+#bookForm button{justify-content:center;cursor:pointer}
+.mailalt{text-align:center;font-size:14px;color:var(--muted);text-decoration:underline}
+@media(max-width:980px){.setup{grid-template-columns:1fr}.booking{grid-template-columns:1fr;padding:34px 22px}}
+@media(max-width:560px){#bookForm{grid-template-columns:1fr}}
 /* lightbox */
 .lb{position:fixed;inset:0;background:rgba(30,22,16,.86);display:none;place-items:center;z-index:50;padding:24px}
 .lb.on{display:grid}.lb img{max-height:90vh;border-radius:12px}
@@ -172,13 +199,13 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
     <a href="#top" class="logo">Studio<span>Pakiza</span></a>
     <ul id="menu">
       <li><a href="#services">Services</a></li>
+      <li><a href="#setup">Store setup</a></li>
       <li><a href="#shop">Shop</a></li>
       <li><a href="#work">Portfolio</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#free">Freebie</a></li>
-      <li><a href="#faq">FAQ</a></li>
+            <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="#contact" class="btn btn-dark">Work with me</a>
+    <a href="#book" class="btn btn-dark">Book a service</a>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
   </div>
 </header>
@@ -192,7 +219,7 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
       <p class="lead">I'm Pakiza — a Canva designer and virtual assistant helping small businesses look polished online, with social media design, brand kits and ready-to-use digital planners.</p>
       <div class="ctas">
         <a href="#shop" class="btn btn-dark">Shop digital products</a>
-        <a href="#services" class="btn btn-line">Hire me</a>
+        <a href="#book" class="btn btn-line">Book a service</a>
       </div>
       <div class="note"><span><b>Remote</b> · UK, USA, Canada &amp; Australia</span><span><b>Replies</b> within 24 hours</span></div>
     </div>
@@ -250,8 +277,80 @@ footer{padding:50px 0 40px;font-size:14px;color:var(--muted)}
           <p>Copy-and-paste captions across 10 categories: launches, sales, reviews, tips, holidays and more.</p>
           <div class="row"><span class="price">£4</span><a class="btn btn-dark order" data-product="100 Instagram Captions (£4)" href="#">Order now</a></div></div>
       </article>
+
+      <article class="product reveal">
+        <img src="product4.webp" alt="Shopify Store Launch Checklist PDF preview">
+        <div class="body"><span class="tag">E-commerce · 6 pages</span><h3>Shopify Store Launch Checklist</h3>
+          <p>45+ step-by-step tasks covering settings, theme, products, policies, shipping and your launch plan.</p>
+          <div class="row"><span class="price">£5</span><a class="btn btn-dark order" data-product="Shopify Store Launch Checklist (£5)" href="#">Order now</a></div></div>
+      </article>
+      <article class="product reveal">
+        <img src="product5.webp" alt="Fiverr Gig Starter Kit PDF preview">
+        <div class="body"><span class="tag">Freelancing · 5 pages</span><h3>Fiverr Gig Starter Kit</h3>
+          <p>Gig title formulas, a description template, 3-package pricing guide, tags, FAQ and an image checklist.</p>
+          <div class="row"><span class="price">£5</span><a class="btn btn-dark order" data-product="Fiverr Gig Starter Kit (£5)" href="#">Order now</a></div></div>
+      </article>
+      <article class="product reveal">
+        <img src="product6.webp" alt="Product Listing Templates PDF preview">
+        <div class="body"><span class="tag">Sellers · 4 pages</span><h3>Product Listing Templates</h3>
+          <p>Title formula, 5-bullet structure and description template for Shopify, Amazon, eBay and Etsy.</p>
+          <div class="row"><span class="price">£4</span><a class="btn btn-dark order" data-product="Product Listing Templates (£4)" href="#">Order now</a></div></div>
+      </article>
+      <article class="product reveal bundle">
+        <div class="body"><span class="tag">Best value</span><h3>The Complete Starter Bundle</h3>
+          <p style="margin:0">All six downloads together — branding, content, captions, Shopify, Fiverr and listing templates.</p>
+          <p class="save">Worth £28 — save £10</p>
+          <div class="row"><span class="price">£18</span><a class="btn btn-dark order" data-product="Complete Starter Bundle - all 6 products (£18)" href="#">Order bundle</a></div></div>
+      </article>
     </div>
     <p class="shop-note">Order on WhatsApp or email and I'll send your PDF as soon as payment is confirmed. Custom versions in your brand colours are available too.</p>
+  </div>
+</section>
+
+<section id="setup" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">Done-for-you setup</p><h2>Launch your business <span class="script">online</span></h2></div>
+      <p>Don't want to do it yourself? I'll set everything up for you — clean, professional and ready to start selling.</p>
+    </div>
+    <div class="setup">
+      <div class="scard reveal"><div class="ic">F</div><h3>Fiverr profile &amp; gigs</h3><p>A complete seller profile and up to 3 gigs that look professional and get found.</p>
+        <ul><li>Profile bio, skills &amp; photo tips</li><li>Keyword-rich gig titles &amp; tags</li><li>Descriptions, packages &amp; FAQ</li><li>Gig thumbnail designs</li></ul>
+        <div class="from"><span>Starting at</span><b>$25</b></div><a href="#book" class="btn btn-line pick" data-svc="Fiverr profile & gigs">Book this</a></div>
+      <div class="scard feat reveal"><span class="pop">Most popular</span><div class="ic">S</div><h3>Shopify store setup</h3><p>A ready-to-sell Shopify store designed around your brand.</p>
+        <ul><li>Theme setup &amp; brand styling</li><li>Up to 20 products uploaded</li><li>Pages, policies &amp; menus</li><li>Payments, shipping &amp; test order</li></ul>
+        <div class="from"><span>Starting at</span><b>$79</b></div><a href="#book" class="btn btn-dark pick" data-svc="Shopify store setup">Book this</a></div>
+      <div class="scard reveal"><div class="ic">W</div><h3>WordPress &amp; WooCommerce</h3><p>A simple business website or online shop on WordPress.</p>
+        <ul><li>Theme install &amp; customisation</li><li>Home, About, Services &amp; Contact</li><li>WooCommerce shop &amp; products</li><li>Mobile-friendly &amp; SEO basics</li></ul>
+        <div class="from"><span>Starting at</span><b>$99</b></div><a href="#book" class="btn btn-line pick" data-svc="WordPress / WooCommerce website">Book this</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:60px">
+  <div class="wrap">
+    <div class="booking reveal">
+      <div>
+        <p class="eyebrow">Book a service</p>
+        <h2>Tell me about your <span class="script">project</span></h2>
+        <p class="sub">Fill in the form and it will open WhatsApp with your details ready to send. I'll reply with a quote and timeline, usually within 24 hours.</p>
+      </div>
+      <form id="bookForm">
+        <label>Your name<input name="name" required placeholder="e.g. Sarah"></label>
+        <label>Service
+          <select name="service" id="svc">
+            <option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option>
+            <option>Social media design</option><option>Brand kit</option><option>Pinterest pins</option><option>Virtual assistant / data entry</option><option>Something else</option>
+          </select></label>
+        <label>Budget (USD)
+          <select name="budget"><option>Under $50</option><option>$50 – $100</option><option>$100 – $250</option><option>$250+</option><option>Not sure yet</option></select></label>
+        <label>When do you need it?
+          <select name="when"><option>This week</option><option>Within 2 weeks</option><option>This month</option><option>Flexible</option></select></label>
+        <label class="full">Project details<textarea name="details" rows="4" placeholder="Your business, what you need, any links or examples you like"></textarea></label>
+        <button class="btn btn-dark full" type="submit">Send booking on WhatsApp</button>
+        <a class="mailalt full" id="mailAlt" href="mailto:zaidipakiza6@gmail.com">Prefer email? Send it to zaidipakiza6@gmail.com</a>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -375,6 +474,11 @@ document.querySelectorAll('.order').forEach(b=>{
   const msg=encodeURIComponent('Hi Pakiza! I would like to order: '+b.dataset.product);
   b.href='https://wa.me/923444720578?text='+msg; b.target='_blank'; b.rel='noopener';
 });
+const bf=document.getElementById('bookForm');
+document.querySelectorAll('.pick').forEach(b=>b.addEventListener('click',()=>{document.getElementById('svc').value=b.dataset.svc}));
+function bookText(){const f=new FormData(bf);return 'Hi Pakiza! I would like to book a service.\n\nName: '+f.get('name')+'\nService: '+f.get('service')+'\nBudget: '+f.get('budget')+'\nTimeline: '+f.get('when')+'\nDetails: '+(f.get('details')||'-');}
+bf.addEventListener('submit',e=>{e.preventDefault();window.open('https://wa.me/923444720578?text='+encodeURIComponent(bookText()),'_blank')});
+bf.addEventListener('input',()=>{document.getElementById('mailAlt').href='mailto:zaidipakiza6@gmail.com?subject='+encodeURIComponent('Booking: '+new FormData(bf).get('service'))+'&body='+encodeURIComponent(bookText())});
 const lb=document.getElementById('lb');
 document.querySelectorAll('.gallery img').forEach(i=>i.addEventListener('click',()=>{lb.querySelector('img').src=i.src;lb.classList.add('on')}));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
