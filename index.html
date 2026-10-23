@@ -67,4 +67,4 @@ tick();setInterval(tick,1000);
 const pf=document.getElementById('pbf');pf.addEventListener('submit',async e=>{e.preventDefault();const d=Object.fromEntries(new FormData(pf));const txt=Object.entries(d).map(([k,v])=>k+': '+v).join('\n');
 if(e.submitter&&e.submitter.dataset.wa){window.open('https://wa.me/923444720578?text='+encodeURIComponent('Hi Pakiza! Pre-booking:\n'+txt),'_blank');return}
 try{const r=await fetch('https://formsubmit.co/ajax/zaidipakiza6@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({...d,_subject:'New pre-booking — Studio Pakiza'})});if(!r.ok)throw 0;const o=document.getElementById('okm');o.style.display='block';o.textContent='Thank you! Your pre-booking is received — Pakiza will contact you within 24 hours.';pf.reset()}catch(x){window.open('https://wa.me/923444720578?text='+encodeURIComponent('Hi Pakiza! Pre-booking:\n'+txt),'_blank')}});
-</script><script src="chat.js?v=4"></script></body></html>
+</script><script src="chat.js?v=5"></script></body></html>
