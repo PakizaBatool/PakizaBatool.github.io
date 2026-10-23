@@ -213,6 +213,23 @@ details p{color:var(--muted);margin-top:10px;font-size:15px}
 .bar i{display:block;height:8px;background:var(--soft-2);border-radius:99px;overflow:hidden}.bar em{display:block;height:100%;background:#F2B01E}
 @media(max-width:560px){.rv-sum{flex-direction:column;align-items:stretch}}
 .nav{gap:18px}.menu>li>a{padding:10px 8px}
+.soon{display:inline-block;background:linear-gradient(90deg,#FBE4EA,#F3E8FF);color:#7A3E68;font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{position:relative;border-radius:22px;padding:26px 24px 24px;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;color:var(--ink);transition:.25s;border:1px solid rgba(0,0,0,.04)}
+.cat:hover{transform:translateY(-4px);box-shadow:0 26px 50px -26px rgba(18,26,44,.45)}
+.cat .em{position:absolute;top:22px;left:24px;font-size:34px}
+.cat img{position:absolute;right:-30px;top:-20px;width:190px;transform:rotate(10deg);border-radius:14px;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.cat b{font-size:20px;position:relative}.cat small{position:relative;color:#4b5263;font-size:14px;margin-top:4px}
+.cat .go{position:relative;margin-top:12px;font-weight:700;font-size:14px;color:#9A5F3B}
+.c1{background:linear-gradient(150deg,#E8EEFF,#F7F2FF)}.c2{background:linear-gradient(150deg,#FDE8EF,#FFF5EC)}.c3{background:linear-gradient(150deg,#E9F6EE,#F6FBEF)}.c4{background:linear-gradient(150deg,#FFF3DC,#FDECEC)}
+.aes{background:linear-gradient(180deg,#FFF8FA 0%,#F8F4FF 100%);position:relative;overflow:hidden}
+.aes:before,.aes:after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;z-index:0}
+.aes:before{width:380px;height:380px;background:#FBD5E2;left:-120px;top:-80px}.aes:after{width:420px;height:420px;background:#E3D9FF;right:-140px;bottom:-120px}
+.aes>.wrap{position:relative;z-index:1}
+.spark{color:#C9A0DC}
+.prebook{background:linear-gradient(90deg,#2b1640,#4a2464);color:#fff;text-align:center;font-size:14px;padding:10px 16px}
+.prebook a{color:#F3D27A;font-weight:700;text-decoration:underline}
+@media(max-width:1000px){.cats{grid-template-columns:1fr 1fr}}@media(max-width:560px){.cats{grid-template-columns:1fr}}
 /* contact */
 .contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px}
 .cinfo{background:var(--ink);color:#C9CFDA;border-radius:20px;padding:40px}
@@ -280,9 +297,11 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
   .topbar .tl a.hide{display:none}
   .logo small{display:none}
 }
+@media(max-width:560px){.tl{gap:12px;flex-wrap:wrap;justify-content:center;font-size:12.5px}.tl a[href*="tiktok"]{display:none}}
 </style>
 </head>
 <body>
+<div class="prebook">✨ Grand launch coming soon — <a href="#" onclick="document.querySelector('.spc-btn').click();return false">pre-book now</a> and get early-bird pricing</div>
 <div class="topbar"><div class="wrap">
   <div class="tl"><a href="mailto:zaidipakiza6@gmail.com">zaidipakiza6@gmail.com</a><a class="hide" href="https://wa.me/923444720578" target="_blank" rel="noopener">WhatsApp +92 344 4720578</a><span class="hide">Working remotely with clients worldwide</span></div>
   <div class="tl"><a href="#reviews" class="rv-top">★★★★★ Reviews</a><a href="https://www.linkedin.com/in/pakiza-batool-1647ab365/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener">Pinterest</a><a href="https://www.tiktok.com/@studio.pakiza" target="_blank" rel="noopener">TikTok</a><a class="hide" href="https://www.fiverr.com/pakizazaidi4" target="_blank" rel="noopener">Fiverr</a><a class="hide" href="https://www.upwork.com/freelancers/~0191d5c1745207b191" target="_blank" rel="noopener">Upwork</a></div>
@@ -301,12 +320,10 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
           <a href="#services"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><span><b>Brand kit</b><span>Logo, colours &amp; fonts</span></span></a>
           <a href="#services"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span><b>Virtual assistant</b><span>Data entry &amp; admin support</span></span></a>
         </div></li>
+      <li><a href="web-studio.html">Web Studio</a></li>
+      <li><a href="invitations.html">Invitations</a></li>
       <li><a href="#shop">Digital shop</a></li>
-      <li><a href="#guides">Guides</a></li>
-      <li><a href="#work">Portfolio</a></li>
-      <li><a href="#why">About</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#faq">FAQ</a></li>
+            <li><a href="#work">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-r">
@@ -320,18 +337,19 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
 <div class="drawer-bg" id="dbg" onclick="toggleDrawer(false)"></div>
 <aside class="drawer" id="drawer" aria-label="Categories">
   <div class="dh"><b>Browse categories</b><button onclick="toggleDrawer(false)" aria-label="Close">✕</button></div>
+  <div class="dgrp"><small>Studios</small><a href="web-studio.html">💻 Pakiza Web Studio</a><a href="invitations.html">💌 Invitation Studio</a><a href="docs-studio.html">📄 Docs &amp; Slides Desk</a></div>
   <div class="dgrp"><small>Services</small>
     <a href="shopify-store-setup.html">🛒 Shopify store setup</a>
-    <a href="#services" data-svc="WordPress / WooCommerce website">🌐 WordPress &amp; WooCommerce</a>
+    <a href="web-studio.html">🌐 WordPress &amp; WooCommerce</a>
     <a href="fiverr-gig-setup.html">💼 Fiverr profile &amp; gigs</a>
     <a href="instagram-post-design.html">🎨 Social media design</a>
     <a href="brand-kit-design.html">✨ Brand kit &amp; logo</a>
     <a href="pinterest-marketing.html">📌 Pinterest marketing</a>
     <a href="virtual-assistant-services.html">💻 Virtual assistant &amp; data entry</a></div>
   <div class="dgrp"><small>Invitation cards</small>
-    <a href="#contact" data-svc="Invitation card">💍 Wedding · Nikah · Walima</a>
-    <a href="#contact" data-svc="Invitation card">🌼 Mehndi · Mayun · Dholki</a>
-    <a href="#contact" data-svc="Invitation card">🎂 Birthday &amp; Aqiqa</a></div>
+    <a href="invitations.html#wedding">💍 Wedding · Nikah · Walima</a>
+    <a href="invitations.html#mehndi">🌼 Mehndi · Mayun · Dholki</a>
+    <a href="invitations.html#birthday">🎂 Birthday &amp; Aqiqa</a></div>
   <div class="dgrp"><small>Digital shop</small>
     <a href="#shop" data-f="branding">Branding</a><a href="#shop" data-f="content">Social media</a><a href="#shop" data-f="ecommerce">E-commerce</a><a href="#shop" data-f="freelance">Freelancing</a><a href="#free">🎁 Free download</a></div>
   <div class="dgrp"><small>More</small>
@@ -379,7 +397,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
           <label class="f">Your name<input type="text" name="name" required placeholder="e.g. Sara K."></label>
           <label class="f">Country<input type="text" name="country" placeholder="e.g. UK"></label>
           <label class="f full">Service or product
-            <select name="what"><option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option><option>Social media design</option><option>Brand kit</option><option>Invitation card</option><option>Digital product</option><option>Virtual assistant</option><option>Other</option></select></label>
+            <select name="what"><option>Shopify store setup</option><option>WordPress / WooCommerce website</option><option>Fiverr profile &amp; gigs</option><option>Social media design</option><option>Brand kit</option><option>Invitation card</option><option>PPT / Documents / PDF</option><option>Digital product</option><option>Virtual assistant</option><option>Other</option></select></label>
           <div class="full"><span style="font-size:13.5px;font-weight:600;color:var(--ink)">Rating</span>
             <div class="stars"><input type="radio" name="r" id="r5" value="5" checked><label for="r5">★</label><input type="radio" name="r" id="r4" value="4"><label for="r4">★</label><input type="radio" name="r" id="r3" value="3"><label for="r3">★</label><input type="radio" name="r" id="r2" value="2"><label for="r2">★</label><input type="radio" name="r" id="r1" value="1"><label for="r1">★</label></div></div>
           <label class="f full">Your review<textarea name="text" rows="4" required placeholder="How was your experience?"></textarea></label>
@@ -387,6 +405,18 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
           <p class="mailalt full">Prefer email? <a id="rvMail" href="mailto:zaidipakiza6@gmail.com?subject=Review%20for%20Studio%20Pakiza">Send it by email</a></p>
         </form>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="aes">
+  <div class="wrap">
+    <div class="head center reveal"><span class="kicker">Explore <span class="spark">✦</span> categories</span><h2>What can we create for you?</h2><p class="lead">Pick a studio — each one has its own services, samples and booking.</p></div>
+    <div class="cats">
+      <a class="cat c1 reveal" href="web-studio.html"><span class="em">💻</span><img src="work5.webp" alt=""><b>Pakiza Web Studio</b><small>Websites, Shopify, WordPress &amp; WooCommerce</small><span class="go">Build my website →</span></a>
+      <a class="cat c2 reveal" href="invitations.html"><span class="em">💌</span><img src="inv_nikah.webp" alt=""><b>Invitation Studio</b><small>Nikah, Mehndi, Walima, Birthday &amp; more</small><span class="go">See invitations →</span></a>
+      <a class="cat c3 reveal" href="docs-studio.html"><span class="em">📄</span><img src="diet.webp" alt=""><b>Docs &amp; Slides Desk</b><small>PPTs, documents, PDFs, CVs &amp; formatting</small><span class="go">Get it done →</span></a>
+      <a class="cat c4 reveal" href="#services"><span class="em">🎨</span><img src="menu.webp" alt=""><b>Design &amp; Growth</b><small>Social media, menus, branding, Pinterest &amp; VA</small><span class="go">View services →</span></a>
     </div>
   </div>
 </section>
@@ -447,7 +477,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">PDF</span><span class="badge">Printable</span></div>
     <p>24 curated palettes with HEX codes, the business type each suits best, and a guide to colour roles and the 60-30-10 rule.</p>
     <div class="metrics"><div>Pages<b>9</b></div><div>Format<b>PDF</b></div><div>Best for<b>Brand owners</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Price</small><span class="price" data-k="p1">—</span><a class="btn btn-primary order" data-k="p1" data-product="The Brand Colour Palette Guide" href="#">Order now</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
+  <div class="side"><small>Price</small><span class="price" data-k="p1">—</span><span class="soon">✨ Coming soon</span><a class="btn btn-primary" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%20The%20Brand%20Colour%20Palette%20Guide%20launches." target="_blank" rel="noopener">Notify me</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
 </article>
 <article class="listing reveal" data-cat="content" data-k-sort="p2" data-name="30-day social media content planner">
   <div class="th"><img src="product2.webp" alt="30-Day Social Media Content Planner preview" loading="lazy"></div>
@@ -455,7 +485,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">PDF</span><span class="badge">Printable</span></div>
     <p>30 post ideas, monthly calendar, 4 weekly planners, caption & hashtag bank and a growth tracker.</p>
     <div class="metrics"><div>Pages<b>10</b></div><div>Format<b>PDF</b></div><div>Best for<b>Small businesses</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Price</small><span class="price" data-k="p2">—</span><a class="btn btn-primary order" data-k="p2" data-product="30-Day Content Planner" href="#">Order now</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
+  <div class="side"><small>Price</small><span class="price" data-k="p2">—</span><span class="soon">✨ Coming soon</span><a class="btn btn-primary" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%2030-Day%20Content%20Planner%20launches." target="_blank" rel="noopener">Notify me</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
 </article>
 <article class="listing reveal" data-cat="content" data-k-sort="p3" data-name="100 instagram captions for small business">
   <div class="th"><img src="product3.webp" alt="100 Instagram Captions for Small Business preview" loading="lazy"></div>
@@ -463,7 +493,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">PDF</span><span class="badge">Printable</span></div>
     <p>Copy-and-paste captions across 10 categories: launches, sales, reviews, tips, holidays and calls to action.</p>
     <div class="metrics"><div>Pages<b>13</b></div><div>Format<b>PDF</b></div><div>Best for<b>Shops & creators</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Price</small><span class="price" data-k="p3">—</span><a class="btn btn-primary order" data-k="p3" data-product="100 Instagram Captions" href="#">Order now</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
+  <div class="side"><small>Price</small><span class="price" data-k="p3">—</span><span class="soon">✨ Coming soon</span><a class="btn btn-primary" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%20100%20Instagram%20Captions%20launches." target="_blank" rel="noopener">Notify me</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
 </article>
 <article class="listing reveal" data-cat="ecommerce" data-k-sort="p4" data-name="shopify store launch checklist">
   <div class="th"><img src="product4.webp" alt="Shopify Store Launch Checklist preview" loading="lazy"></div>
@@ -471,7 +501,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">PDF</span><span class="badge">Printable</span></div>
     <p>45+ tick-box tasks covering settings, theme, products, SEO, policies, shipping and your launch plan.</p>
     <div class="metrics"><div>Pages<b>6</b></div><div>Format<b>PDF</b></div><div>Best for<b>New store owners</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Price</small><span class="price" data-k="p4">—</span><a class="btn btn-primary order" data-k="p4" data-product="Shopify Store Launch Checklist" href="#">Order now</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
+  <div class="side"><small>Price</small><span class="price" data-k="p4">—</span><span class="soon">✨ Coming soon</span><a class="btn btn-primary" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%20Shopify%20Store%20Launch%20Checklist%20launches." target="_blank" rel="noopener">Notify me</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
 </article>
 <article class="listing reveal" data-cat="freelance" data-k-sort="p5" data-name="fiverr gig starter kit">
   <div class="th"><img src="product5.webp" alt="Fiverr Gig Starter Kit preview" loading="lazy"></div>
@@ -479,7 +509,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">PDF</span><span class="badge">Printable</span></div>
     <p>Gig title formulas, description template, 3-package pricing guide, tags, FAQ and gig image checklist.</p>
     <div class="metrics"><div>Pages<b>5</b></div><div>Format<b>PDF</b></div><div>Best for<b>New freelancers</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Price</small><span class="price" data-k="p5">—</span><a class="btn btn-primary order" data-k="p5" data-product="Fiverr Gig Starter Kit" href="#">Order now</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
+  <div class="side"><small>Price</small><span class="price" data-k="p5">—</span><span class="soon">✨ Coming soon</span><a class="btn btn-primary" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%20Fiverr%20Gig%20Starter%20Kit%20launches." target="_blank" rel="noopener">Notify me</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
 </article>
 <article class="listing reveal" data-cat="ecommerce" data-k-sort="p6" data-name="product listing templates">
   <div class="th"><img src="product6.webp" alt="Product Listing Templates preview" loading="lazy"></div>
@@ -487,7 +517,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">PDF</span><span class="badge">Printable</span></div>
     <p>Title formula, 5-bullet structure and description template for Shopify, Amazon, eBay and Etsy.</p>
     <div class="metrics"><div>Pages<b>4</b></div><div>Format<b>PDF</b></div><div>Best for<b>Online sellers</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Price</small><span class="price" data-k="p6">—</span><a class="btn btn-primary order" data-k="p6" data-product="Product Listing Templates" href="#">Order now</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
+  <div class="side"><small>Price</small><span class="price" data-k="p6">—</span><span class="soon">✨ Coming soon</span><a class="btn btn-primary" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%20Product%20Listing%20Templates%20launches." target="_blank" rel="noopener">Notify me</a><a class="btn btn-outline btn-sm prev" href="#">Preview</a></div>
 </article>
 <article class="listing bundle reveal" data-cat="all-bundle" data-k-sort="bundle" data-name="complete starter bundle">
   <div class="top"><span>Best value bundle</span><span>All 6 products</span></div>
@@ -496,7 +526,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
     <div class="badges"><span class="badge g">Instant download</span><span class="badge">6 PDFs</span></div>
     <p>Everything above in one download — branding, content planning, captions, Shopify launch, Fiverr gigs and listing templates.</p>
     <div class="metrics"><div>Products<b>6</b></div><div>Pages<b>47</b></div><div>Best for<b>Starting a business</b></div><div>Delivery<b>Same day</b></div></div></div>
-  <div class="side"><small>Bundle price</small><span class="was" data-k="worth">—</span><span class="price" data-k="bundle">—</span><span class="off">You save <span data-k="save">—</span></span><a class="btn btn-brand order" data-k="bundle" data-product="Complete Starter Bundle (all 6 products)" href="#">Order bundle</a></div>
+  <div class="side"><small>Bundle price</small><span class="was" data-k="worth">—</span><span class="price" data-k="bundle">—</span><span class="off">You save <span data-k="save">—</span></span><span class="soon">✨ Coming soon</span><a class="btn btn-brand" href="https://wa.me/923444720578?text=Hi%20Pakiza!%20Please%20notify%20me%20when%20the%20Starter%20Bundle%20launches." target="_blank" rel="noopener">Pre-book bundle</a></div>
 </article>
 
     </div>
@@ -519,7 +549,7 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
   <div class="wrap">
     <div class="head reveal"><span class="kicker">Portfolio</span><h2>Recent design work</h2><p class="lead">Pinterest pins, product mockups and promotional graphics. Click to enlarge.</p></div>
     <div class="pgrid">
-      <img src="work1.webp" alt="Instagram post templates" loading="lazy"><img src="work5.webp" alt="Shopify banners and product images" loading="lazy"><img src="work3.webp" alt="Brand kit" loading="lazy"><img src="tips2.webp" alt="Colour palettes" loading="lazy">
+      <img src="menu.webp" alt="Restaurant menu design" loading="lazy"><img src="gym.webp" alt="Gym membership price list design" loading="lazy"><img src="diet.webp" alt="Diet plan design" loading="lazy"><img src="inv_nikah.webp" alt="Nikah invitation card" loading="lazy"><img src="work1.webp" alt="Instagram post templates" loading="lazy"><img src="work5.webp" alt="Shopify banners and product images" loading="lazy"><img src="work3.webp" alt="Brand kit" loading="lazy"><img src="tips2.webp" alt="Colour palettes" loading="lazy">
       <img src="work4.webp" alt="Content calendar" loading="lazy"><img src="tips3.webp" alt="Instagram posts that sell" loading="lazy"><img src="work6.webp" alt="Virtual assistant to-do list" loading="lazy"><img src="work7.webp" alt="Cursive font pairings" loading="lazy">
     </div>
     <div style="text-align:center;margin-top:30px"><a class="btn btn-outline" href="https://www.pinterest.com/zaidipakiza6/" target="_blank" rel="noopener">See more on Pinterest <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
@@ -708,5 +738,6 @@ document.querySelectorAll('.prev').forEach(p=>p.addEventListener('click',e=>{e.p
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="chat.js"></script>
 </body>
 </html>
