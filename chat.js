@@ -20,7 +20,7 @@ const css=`.spc-btn{position:fixed;right:22px;bottom:92px;z-index:70;height:54px
 .spc-f{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #E4E7EC}
 .spc-f input{flex:1;border:1px solid #E4E7EC;border-radius:10px;padding:11px 12px;font:14.5px Inter,sans-serif;outline:none}
 .spc-f button{border:0;background:#B9774E;color:#fff;border-radius:10px;padding:0 16px;font-weight:700;cursor:pointer}
-@media(max-width:560px){.spc{right:12px;bottom:84px}.spc-btn{right:12px;bottom:84px;padding:0 16px}}`;
+@media(max-width:560px){.spc{right:8px;left:8px;width:auto;max-width:none;bottom:12px;height:72vh}.spc-btn{right:14px;bottom:84px;height:44px;padding:0 14px;font-size:13.5px}}`;
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 const cur=()=>{try{const c=document.getElementById('cur');return c&&window.PR?c.value:null}catch(e){return null}};
 const price=k=>{const c=cur();if(c&&window.PR&&PR[c]&&PR[c][k]!==undefined)return PR[c].s+Number(PR[c][k]).toLocaleString('en-US');const d={s_shopify:'$79',s_wp:'$99',s_fiverr:'$25',s_social:'$15',s_brand:'$35',s_pin:'$12',s_va:'$5'};return d[k]||''};

@@ -38,6 +38,7 @@ h1{font-size:clamp(54px,11vw,110px);font-weight:900;letter-spacing:-.03em;line-h
 .okm{display:none;margin-top:12px;background:rgba(43,214,123,.15);color:#8ff0bf;padding:12px;border-radius:10px;font-weight:600}
 @media(max-width:560px){#pbf{grid-template-columns:1fr}}
 footer{margin-top:auto;padding:24px;font-size:13px;color:#8f86a6}
+html,body{overflow-x:clip}main{width:100%;box-sizing:border-box}@media(max-width:420px){main{padding:56px 16px 32px}}
 </style></head><body>
 <div class="b" style="width:420px;height:420px;background:#E9A6C4;left:-140px;top:120px"></div>
 <div class="b" style="width:520px;height:520px;background:#6b4bd6;right:-180px;bottom:40px"></div>
@@ -66,4 +67,4 @@ tick();setInterval(tick,1000);
 const pf=document.getElementById('pbf');pf.addEventListener('submit',async e=>{e.preventDefault();const d=Object.fromEntries(new FormData(pf));const txt=Object.entries(d).map(([k,v])=>k+': '+v).join('\n');
 if(e.submitter&&e.submitter.dataset.wa){window.open('https://wa.me/923444720578?text='+encodeURIComponent('Hi Pakiza! Pre-booking:\n'+txt),'_blank');return}
 try{const r=await fetch('https://formsubmit.co/ajax/zaidipakiza6@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({...d,_subject:'New pre-booking — Studio Pakiza'})});if(!r.ok)throw 0;const o=document.getElementById('okm');o.style.display='block';o.textContent='Thank you! Your pre-booking is received — Pakiza will contact you within 24 hours.';pf.reset()}catch(x){window.open('https://wa.me/923444720578?text='+encodeURIComponent('Hi Pakiza! Pre-booking:\n'+txt),'_blank')}});
-</script><script src="chat.js?v=2"></script></body></html>
+</script><script src="chat.js?v=3"></script></body></html>

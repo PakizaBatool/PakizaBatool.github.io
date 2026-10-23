@@ -323,3 +323,11 @@ footer .logo{color:#fff}.footer-about{margin:16px 0 20px;max-width:330px}
 .note{font-size:13.5px;color:var(--muted)}
 @media(max-width:1000px){.pk{grid-template-columns:1fr}.types{grid-template-columns:1fr 1fr}}@media(max-width:560px){.types,.ofrm{grid-template-columns:1fr}}
 @media(max-width:560px){.tl{gap:12px;flex-wrap:wrap;justify-content:center;font-size:12.5px}.tl a[href*="tiktok"]{display:none}}
+
+html,body{overflow-x:clip;max-width:100%}img,video,iframe{max-width:100%}@media(max-width:420px){.nav{gap:8px}.logo{font-size:17px;gap:8px}.logo small{display:none}.logo .mk{width:34px;height:34px;font-size:26px}.cur{font-size:12.5px;padding:7px 6px;max-width:82px}.nav-r{gap:6px}.wrap{padding-left:16px;padding-right:16px}}
+
+.reviews>*{min-width:0}@media(max-width:900px){.reviews{grid-template-columns:minmax(0,1fr)}}select,input,textarea{max-width:100%}
+
+.contact>*,.hero-g>*,.why>*,.free>*,.listing>*,.sgrid>*,.pgrid>*,.cats>*,.fgrid>*,form>*{min-width:0}@media(max-width:900px){.contact{grid-template-columns:minmax(0,1fr)}}@media(max-width:480px){form{grid-template-columns:minmax(0,1fr)!important}.listing{grid-template-columns:minmax(0,1fr)!important}.stats{padding:0 12px;gap:8px}}
+
+@media(max-width:560px){.topbar .wrap{height:auto;padding-top:8px;padding-bottom:8px;flex-direction:column;gap:6px}.topbar .tl{gap:14px;flex-wrap:wrap;justify-content:center}.cat{min-height:230px}.cat img{width:130px;right:-24px;top:-14px;opacity:.9}.cat b,.cat small,.cat .go{max-width:62%}.cat small{max-width:68%}.hero h1{font-size:34px}}
