@@ -10,9 +10,9 @@ const css=`.spc-btn{position:fixed;right:22px;bottom:92px;z-index:70;height:54px
 .spc-h b{display:block;font-size:15px}.spc-h small{font-size:12px;color:#B8C0CE}
 .spc-h button{margin-left:auto;background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
 .spc-m{flex:1;overflow-y:auto;padding:16px;background:#F5F6F8;display:flex;flex-direction:column;gap:10px}
-.spc-m .b{max-width:85%;padding:11px 14px;border-radius:14px;font-size:14.5px;line-height:1.5;white-space:pre-line}
-.spc-m .bot{background:#fff;color:#2B3446;border:1px solid #E4E7EC;border-top-left-radius:4px}
-.spc-m .me{background:#121A2C;color:#fff;align-self:flex-end;border-top-right-radius:4px}
+.spc-m .spc-bb{position:static;transform:none;filter:none;opacity:1;width:auto;height:auto;inset:auto;max-width:85%;padding:11px 14px;border-radius:14px;font-size:14.5px;line-height:1.5;white-space:pre-line}
+.spc-m .spc-bb.bot{background:#fff;color:#2B3446;border:1px solid #E4E7EC;border-top-left-radius:4px}
+.spc-m .spc-bb.me{background:#121A2C;color:#fff;align-self:flex-end;border-top-right-radius:4px}
 .spc-m a{color:#9A5F3B;font-weight:600}
 .spc-q{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;border-top:1px solid #E4E7EC;background:#fff}
 .spc-q button{border:1px solid #E4E7EC;background:#fff;border-radius:999px;padding:7px 11px;font:500 13px Inter,sans-serif;color:#2B3446;cursor:pointer}
@@ -65,7 +65,7 @@ const box=document.createElement('div');box.className='spc';
 box.innerHTML=`<div class="spc-h"><div class="av">P</div><div><b>Studio Pakiza Assistant</b><small>Usually replies instantly</small></div><button aria-label="Close">✕</button></div><div class="spc-m"></div><div class="spc-q"></div><form class="spc-f"><input placeholder="Type your question…" aria-label="Message"><button>Send</button></form>`;
 document.body.appendChild(btn);document.body.appendChild(box);
 const M=box.querySelector('.spc-m'),Q=box.querySelector('.spc-q'),F=box.querySelector('form'),I=F.querySelector('input');
-const add=(t,who)=>{const d=document.createElement('div');d.className='b '+who;if(who==='bot')d.innerHTML=t;else d.textContent=t;M.appendChild(d);M.scrollTop=M.scrollHeight};
+const add=(t,who)=>{const d=document.createElement('div');d.className='spc-bb '+who;if(who==='bot')d.innerHTML=t;else d.textContent=t;M.appendChild(d);M.scrollTop=M.scrollHeight};
 const ask=t=>{add(t,'me');setTimeout(()=>add(answer(t),'bot'),350)};
 ['Website / Web Studio','Shopify store','Invitation cards','PPT & documents','Prices','Place an order','Talk to Pakiza'].forEach(x=>{const b=document.createElement('button');b.type='button';b.textContent=x;b.onclick=()=>ask(x);Q.appendChild(b)});
 F.onsubmit=e=>{e.preventDefault();const t=I.value.trim();if(!t)return;I.value='';ask(t)};
